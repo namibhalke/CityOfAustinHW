@@ -1,0 +1,47 @@
+#Bug report
+
+1. Testcase -- test_2ndInValidArgument_10
+Description : When user enters invalid URL the URL validator Rule 2 fails 
+
+Actual Scenario : When user enters invalid URL "www.austintexas.gov?a=1&b=2', ['b']" then the validator Rule 2 fails validating and does not removes query string parameters specified within the 2nd argument (optional array) and returns "www.austintexas.gov?a=1&b=2"
+
+Expected Scenario: When user enters invalid URL "www.austintexas.gov?a=1&b=2', ['b']" then the validator Rule 2 should validating and should removes query string parameters specified within the 2nd argument (optional array) and then returns "www.austintexas.gov?a=1"
+
+
+2. Testcase -- test_2ndValidArgument_9
+Description : When user enters invalid URL the URL validator Rule 2 does not validate and gives error 
+
+Actual Scenario : When user enters URL with query string parameters specified within the 2nd argument (optional array)  "www.austintexas.gov?a=1&b=2', ['b']" then the validator Rule 2 fails validating and error is given
+
+Expected Scenario: When user enters invalid URL with query string parameters specified within the 2nd argument (optional array) "www.austintexas.gov?a=1&b=2', ['b']" then the validator Rule 2 should validating and should removes query string parameters specified within the 2nd argument (optional array) and then returns "www.austintexas.gov?a=1"
+
+3. Testcase -- test_validURL_VerifyInvalidURL_8
+Description : When user enters invalid URL then there should be proper error message given 
+
+Actual Scenario : When user enters invalid URL "www.austintexas,com"  no error message is given
+
+Expected Scenario: When user enters invalid URL "www.austintexas,com"  then proper Error message should be given like "Please verify entered URL"
+
+4. Testcase -- def test_invalidURL_6
+Description : When user enters invalid URL then there should be proper error message given 
+
+Actual Scenario : When user enters invalid URL "ww.austintexas,com"  no error message is given
+
+Expected Scenario: When user enters invalid URL "ww.austintexas,com"  then proper Error message should be given like "Please verify entered URL"
+
+5. Testcase -- test_validURL_withParamValueAnd2Equals_3
+Description : When user enters invalid URL with ParamValueAnd2Equals then there should be proper error message given or the validator should validate  
+
+Actual Scenario : When user enters invalid URL with ParamValueAnd2Equals "www.austintexas.gov?a==1&b=2"  no proper error message is given & validator does not validate 
+
+Expected Scenario: When user enters invalid URL with ParamValueAnd2Equals "www.austintexas.gov?a==1&b=2" then proper Error message should be given like "Please verify entered URL" or the validator should remove the extra '=' sign.
+
+6.Testcase -- test_validURL_withANDkeyword_2
+Description : When user enters invalid URL with ParamValueKeywordAnd then there should be proper error message given 
+
+Actual Scenario : When user enters invalid URL with ParamValueKeywordAnd "www.austintexas.gov?a=1ANDb=2" no proper error message is given
+
+Expected Scenario: When user enters invalid URL with ParamValueKeywordAnd "www.austintexas.gov?a=1ANDb=2" then proper Error message should be given like "Please verify entered URL " or "AND keyword should be replaced with &"
+
+
+

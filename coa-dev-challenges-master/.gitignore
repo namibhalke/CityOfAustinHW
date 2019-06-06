@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+.env
+__pycache__
+.vscode
+./backend/yarn-error.log
+./frontend/react/dist
+*_cache
+*/sandbox.py
